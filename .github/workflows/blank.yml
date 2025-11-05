@@ -33,8 +33,8 @@ jobs:
         run: |
           newman run kolekcja2.json \
           -e env1.json \
-          --env-var "username=${{ secrets.postman_username }}" \
-          --env-var "password=${{ secrets.postman_password }}" \
+          --env-var "username=${{ secrets.POSTMAN_USERNAME }}" \
+          --env-var "password=${{ secrets.POSTMAN_PASSWORD }}" \
 
             --reporters cli,htmlextra \
             --reporter-htmlextra-export reports/results.html
